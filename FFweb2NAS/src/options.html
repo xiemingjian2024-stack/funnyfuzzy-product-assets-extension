@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>FunnyFuzzy 内部素材设置</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 24px;
+        max-width: 720px;
+      }
+
+      label {
+        display: block;
+        font-weight: 700;
+        margin-top: 16px;
+      }
+
+      input,
+      textarea {
+        box-sizing: border-box;
+        margin-top: 6px;
+        width: 100%;
+        padding: 8px;
+      }
+
+      button {
+        margin-top: 18px;
+        padding: 8px 12px;
+      }
+
+      #status {
+        color: #57606a;
+        margin-top: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>FunnyFuzzy 内部素材设置</h1>
+
+    <label>
+      内部查询服务 URL
+      <input id="serviceUrl" type="url" />
+    </label>
+
+    <label>
+      插件访问令牌
+      <input id="extensionAccessToken" type="password" />
+    </label>
+
+    <label>
+      绑定表链接
+      <input id="bindingSheetUrl" type="url" />
+    </label>
+
+    <label>
+      允许的官网域名
+      <textarea id="allowedDomains" rows="5"></textarea>
+    </label>
+
+    <button id="save" type="button">保存设置</button>
+    <div id="status"></div>
+
+    <script type="module" src="./options.js"></script>
+  </body>
+</html>

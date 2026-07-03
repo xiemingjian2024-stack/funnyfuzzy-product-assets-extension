@@ -1,0 +1,9 @@
+services:
+  funnyfuzzy-product-assets:
+    build: .
+    container_name: funnyfuzzy-product-assets
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - "8787:8787"

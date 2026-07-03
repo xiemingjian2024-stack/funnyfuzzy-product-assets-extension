@@ -1,0 +1,25 @@
+{
+  "name": "funnyfuzzy-product-assets-extension",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:extension": "node scripts/build-extension.mjs",
+    "package:extension": "node scripts/package-extension.mjs",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "service:start": "node service/src/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^4.1.8",
+    "esbuild": "^0.28.0",
+    "jsdom": "^29.1.1",
+    "supertest": "^7.2.2",
+    "vitest": "^4.1.8"
+  }
+}

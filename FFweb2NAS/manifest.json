@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "FunnyFuzzy 内部素材入口",
+  "version": "1.1.2",
+  "description": "在 FunnyFuzzy 产品页显示 NAS 素材和 SKU 表格入口。",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "action": {
+    "default_title": "FunnyFuzzy 内部素材入口",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png"
+    }
+  },
+  "permissions": ["storage", "clipboardWrite"],
+  "background": {
+    "service_worker": "dist/background.js"
+  },
+  "host_permissions": [
+    "https://funnyfuzzy.com/*",
+    "https://*.funnyfuzzy.com/*",
+    "https://funnyfuzzy.co.uk/*",
+    "https://*.funnyfuzzy.co.uk/*",
+    "http://192.168.2.4:8787/*",
+    "http://172.16.21.107:8787/*",
+    "http://localhost:8787/*",
+    "http://127.0.0.1:8787/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://funnyfuzzy.com/products/*",
+        "https://*.funnyfuzzy.com/products/*",
+        "https://funnyfuzzy.co.uk/products/*",
+        "https://*.funnyfuzzy.co.uk/products/*"
+      ],
+      "js": ["dist/contentScript.js"],
+      "css": ["src/styles.css"]
+    }
+  ],
+  "options_page": "src/options.html"
+}
