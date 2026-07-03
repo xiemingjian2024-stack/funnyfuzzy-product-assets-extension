@@ -56,7 +56,6 @@ The extension now works like this:
 4. Render the related SPU and asset actions inside a collapsible panel
 5. Open NAS folders or SPU sheet without leaving the product workflow
 
-![Workflow](docs/assets/codex-summary-workflow.png)
 
 ## UI Evolution
 
@@ -64,7 +63,6 @@ The extension now works like this:
 
 The earlier version focused on proving the workflow and main actions first.
 
-![Initial UI](docs/assets/product-assets-ui-initial.png)
 
 ### Final UI
 
